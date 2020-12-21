@@ -1,0 +1,8 @@
+POST  https://oapi.dingtalk.com/topapi/v2/department/listsub?access_token=f603d0c27b163033984f3169f5711478
+Content-Type: application/json
+
+{
+  "dept_id":139610222
+}
+
+###

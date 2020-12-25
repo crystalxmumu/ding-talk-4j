@@ -11,6 +11,7 @@
     <modules>
         <module>ding-talk-org</module>
         <module>ding-talk-common</module>
+        <module>ding-talk-org-boot-starter</module>
     </modules>
 
 

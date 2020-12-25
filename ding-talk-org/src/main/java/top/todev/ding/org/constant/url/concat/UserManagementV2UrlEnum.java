@@ -17,13 +17,15 @@ import static top.todev.ding.org.bean.DingOrgHostConfig.API_DEFAULT_HOST_URL;
  */
 @Getter
 @AllArgsConstructor
-public enum DepartmentManagementV2UrlEnum  implements IDingTalkOrgApiUrl {
+public enum UserManagementV2UrlEnum implements IDingTalkOrgApiUrl {
 
-    /** 获取部门列表 */
-    V2_DEPARTMENT_LIST_SUB(API_DEFAULT_HOST_URL, "/topapi/v2/department/listsub", Method.POST),
-    V2_DEPARTMENT_GET_DETAIL(API_DEFAULT_HOST_URL, "/topapi/v2/department/get", Method.POST)
+    /** 获取用户详情 */
+    V2_USER_GET_DETAIL(API_DEFAULT_HOST_URL, "/topapi/v2/user/get", Method.POST),
+    /** 获取用户详情 */
+    V2_USER_LIST_SIMPLE(API_DEFAULT_HOST_URL, "/topapi/user/listsimple", Method.POST)
     ;
 
+    /** 路径前缀 */
     private final String prefix;
     /**
      * 路径URI

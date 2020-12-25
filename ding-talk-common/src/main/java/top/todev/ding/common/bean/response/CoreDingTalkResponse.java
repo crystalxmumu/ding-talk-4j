@@ -1,10 +1,7 @@
 package top.todev.ding.common.bean.response;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
-import java.util.List;
 
 /**
  * <p>获取部门列表响应实体</p>
@@ -19,7 +16,7 @@ import java.util.List;
 public class CoreDingTalkResponse<T> extends BaseDingTalkResponse<T> {
     private static final long serialVersionUID = -80374356675611799L;
 
-    /** 部门列表。 */
+    /** 响应结果 */
     protected T result;
 
     @Override

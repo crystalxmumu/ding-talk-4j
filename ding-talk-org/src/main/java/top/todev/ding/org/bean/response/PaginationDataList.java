@@ -15,7 +15,7 @@ import java.util.List;
  * @since 0.0.1
  */
 @Data
-public class Pagination<T> implements Serializable {
+public class PaginationDataList<T> implements Serializable {
 
     private static final long serialVersionUID = 1144542754784953391L;
     /**

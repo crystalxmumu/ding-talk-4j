@@ -6,11 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import top.todev.ding.common.bean.DingAccessToken;
 import top.todev.ding.common.bean.request.token.ObtainAccessTokenRequest;
 import top.todev.ding.common.bean.response.token.ObtainAccessTokenResponse;
-import top.todev.ding.common.error.DingErrorException;
 import top.todev.ding.common.error.DingRuntimeException;
-import top.todev.ding.org.api.IDingOrgDepartmentManagementV2Service;
-import top.todev.ding.org.api.IDingOrgReportManagementService;
-import top.todev.ding.org.api.IDingOrgService;
+import top.todev.ding.org.api.*;
 import top.todev.ding.org.config.DingOrgConfigStorage;
 import top.todev.ding.org.util.DingOrgConfigStorageHolder;
 import top.todev.ding.org.util.OrgHttpExUtil;
@@ -37,12 +34,18 @@ public class DingOrgServiceImpl implements IDingOrgService {
 
     private Map<String, DingOrgConfigStorage> configStorageMap;
     @Getter
+    private final IDingOrgIdentityAuthenticationService identityAuthenticationService;
+    @Getter
     private final IDingOrgDepartmentManagementV2Service departmentManagementV2Service;
+    @Getter
+    private final IDingOrgUserManagementV2Service userManagementV2Service;
     @Getter
     private final IDingOrgReportManagementService reportManagementService;
 
     public DingOrgServiceImpl() {
+        this.identityAuthenticationService = new DingOrgIdentityAuthenticationServiceImpl(this);
         this.departmentManagementV2Service = new DingOrgDepartmentManagementV2ServiceImpl(this);
+        this.userManagementV2Service = new DingOrgUserManagementV2ServiceImpl(this);
         this.reportManagementService = new DingOrgReportManagementServiceImpl(this);
     }
 

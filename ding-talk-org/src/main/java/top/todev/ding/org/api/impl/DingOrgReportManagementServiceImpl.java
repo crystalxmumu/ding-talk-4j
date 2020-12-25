@@ -6,16 +6,12 @@ import top.todev.ding.common.bean.response.CoreDingTalkResponse;
 import top.todev.ding.org.api.IDingOrgReportManagementService;
 import top.todev.ding.org.api.IDingOrgService;
 import top.todev.ding.org.bean.request.v1.report.OapiReportListRequest;
-import top.todev.ding.org.bean.response.Pagination;
+import top.todev.ding.org.bean.response.PaginationDataList;
 import top.todev.ding.org.bean.response.v1.report.OapiReportVo;
-import top.todev.ding.org.bean.response.v2.dept.OapiV2DepartmentListSubResponse;
 import top.todev.ding.org.util.OrgHttpExUtil;
 import top.todev.tool.model.exception.NotExceptException;
 
-import java.util.List;
-
 import static top.todev.ding.org.constant.url.OrgReportManagementUrlEnum.REPORT_LIST;
-import static top.todev.ding.org.constant.url.concat.DepartmentManagementV2UrlEnum.V2_DEPARTMENT_LIST_SUB;
 
 /**
  * <p>日志管理服务接口实现</p>
@@ -33,9 +29,9 @@ public class DingOrgReportManagementServiceImpl extends DingOrgBaseServiceImpl i
     }
 
     @Override
-    public Pagination<OapiReportVo> listReport(OapiReportListRequest request) throws NotExceptException {
+    public PaginationDataList<OapiReportVo> listReport(OapiReportListRequest request) throws NotExceptException {
         return OrgHttpExUtil.getAndCheck(service, REPORT_LIST,
-                request, () -> new TypeReference<CoreDingTalkResponse<Pagination<OapiReportVo>>>(){},
+                request, () -> new TypeReference<CoreDingTalkResponse<PaginationDataList<OapiReportVo>>>(){},
                 false, true);
     }
 }

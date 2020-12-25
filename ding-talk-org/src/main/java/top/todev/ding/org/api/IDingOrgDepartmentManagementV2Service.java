@@ -1,7 +1,9 @@
 package top.todev.ding.org.api;
 
+import top.todev.ding.org.bean.request.v2.dept.OapiV2DepartmentGetRequest;
 import top.todev.ding.org.bean.request.v2.dept.OapiV2DepartmentListSubRequest;
 import top.todev.ding.org.bean.response.v2.dept.DeptBaseResponse;
+import top.todev.ding.org.bean.response.v2.dept.DeptGetResponse;
 import top.todev.tool.model.exception.NotExceptException;
 
 import java.util.List;
@@ -26,4 +28,15 @@ public interface IDingOrgDepartmentManagementV2Service {
      * @since 0.0.1
      */
     List<DeptBaseResponse> listSub(OapiV2DepartmentListSubRequest request) throws NotExceptException;
+
+    /**
+     * <p>获取部门详情</p>
+     * @param request 查询参数
+     * @return 部门详情
+     * @throws NotExceptException 不期望发生的异常
+     * @author 小飞猪
+     * @date 2020/12/24 10:44
+     * @since 0.0.1
+     */
+    DeptGetResponse departmentGetDetail(OapiV2DepartmentGetRequest request) throws NotExceptException;
 }

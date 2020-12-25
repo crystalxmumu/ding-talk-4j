@@ -1,13 +1,9 @@
 package top.todev.ding.org.api;
 
 import top.todev.ding.org.bean.request.v1.report.OapiReportListRequest;
-import top.todev.ding.org.bean.request.v2.dept.OapiV2DepartmentListSubRequest;
-import top.todev.ding.org.bean.response.Pagination;
+import top.todev.ding.org.bean.response.PaginationDataList;
 import top.todev.ding.org.bean.response.v1.report.OapiReportVo;
-import top.todev.ding.org.bean.response.v2.dept.DeptBaseResponse;
 import top.todev.tool.model.exception.NotExceptException;
-
-import java.util.List;
 
 /**
  * <p>日志管理服务接口</p>
@@ -28,5 +24,5 @@ public interface IDingOrgReportManagementService {
      * @date 2020/12/21 16:04
      * @since 0.0.1
      */
-    Pagination<OapiReportVo> listReport(OapiReportListRequest request) throws NotExceptException;
+    PaginationDataList<OapiReportVo> listReport(OapiReportListRequest request) throws NotExceptException;
 }

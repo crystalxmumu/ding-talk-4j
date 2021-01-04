@@ -25,7 +25,7 @@ import top.todev.ding.org.config.impl.DingOrgDefaultConfigImpl;
 public class DingTalkOrgDefaultConfiguration {
 
     @Bean
-    @ConditionalOnProperty(prefix = DingTalkOrgConfigProperties.PREFIX, value = "appKey")
+    @ConditionalOnProperty(prefix = DingTalkOrgConfigProperties.PREFIX, value = "app-key")
     public IDingOrgService dingOrgService(DingTalkOrgConfigProperties properties) {
         DingTalkOrgConfigProperties.HostConfig hostConfig = properties.getHost();
 

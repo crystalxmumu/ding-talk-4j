@@ -5,6 +5,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import top.todev.ding.common.bean.DingAccessToken;
 import top.todev.ding.common.bean.response.BaseDingTalkResponse;
+import top.todev.tool.model.bean.IResultResponse;
+
+import static top.todev.tool.model.constant.BaseErrorCodeEnum.ERROR_CODE_0;
 
 /**
  * <p>获取token响应实体</p>
@@ -30,5 +33,12 @@ public class ObtainAccessTokenResponse extends BaseDingTalkResponse<DingAccessTo
     @Override
     public DingAccessToken getData() {
         return new DingAccessToken(this.accessToken, this.expiresIn);
+    }
+
+    @Override
+    public BaseDingTalkResponse<DingAccessToken> initSuccess(DingAccessToken token) {
+        this.accessToken = token.getAccessToken();
+        this.expiresIn = token.getExpiresIn();
+        return this;
     }
 }

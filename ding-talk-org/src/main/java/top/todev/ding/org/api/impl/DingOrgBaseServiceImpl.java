@@ -3,7 +3,6 @@ package top.todev.ding.org.api.impl;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import top.todev.ding.org.api.IDingOrgService;
-import top.todev.ding.org.config.DingOrgConfigStorage;
 
 /**
  * <p>钉钉企业开发接口基础实现类</p>

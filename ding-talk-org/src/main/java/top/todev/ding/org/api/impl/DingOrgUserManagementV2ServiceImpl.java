@@ -1,6 +1,7 @@
 package top.todev.ding.org.api.impl;
 
 import lombok.NonNull;
+import top.todev.ding.common.util.HttpExUtil;
 import top.todev.ding.org.api.IDingOrgService;
 import top.todev.ding.org.api.IDingOrgUserManagementV2Service;
 import top.todev.ding.org.bean.request.v2.user.OapiUserListSimpleRequest;
@@ -10,7 +11,6 @@ import top.todev.ding.org.bean.response.v2.user.ListUserSimpleResponse;
 import top.todev.ding.org.bean.response.v2.user.OapiUserListSimpleResponse;
 import top.todev.ding.org.bean.response.v2.user.OapiV2UserGetResponse;
 import top.todev.ding.org.bean.response.v2.user.UserGetResponse;
-import top.todev.ding.org.util.OrgHttpExUtil;
 import top.todev.tool.model.exception.NotExceptException;
 
 import static top.todev.ding.org.constant.url.concat.UserManagementV2UrlEnum.V2_USER_GET_DETAIL;
@@ -32,14 +32,14 @@ public class DingOrgUserManagementV2ServiceImpl extends DingOrgBaseServiceImpl i
 
     @Override
     public UserGetResponse userGetDetail(OapiV2UserGetRequest request) throws NotExceptException {
-        return OrgHttpExUtil.getAndCheck(service, V2_USER_GET_DETAIL,
+        return HttpExUtil.getAndCheck(service, V2_USER_GET_DETAIL,
                 request, OapiV2UserGetResponse.class,
                 false, true);
     }
 
     @Override
     public PaginationList<ListUserSimpleResponse> userListSimple(OapiUserListSimpleRequest request) throws NotExceptException {
-        return OrgHttpExUtil.getAndCheck(service, V2_USER_LIST_SIMPLE,
+        return HttpExUtil.getAndCheck(service, V2_USER_LIST_SIMPLE,
                 request, OapiUserListSimpleResponse.class,
                 false, true);
     }

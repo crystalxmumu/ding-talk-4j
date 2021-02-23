@@ -1,11 +1,8 @@
 package top.todev.ding.org.bean.request.v2.dept;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import top.todev.ding.common.annotation.RequestParam;
-import top.todev.ding.common.bean.request.BaseDingTalkRequest;
 import top.todev.ding.common.constant.data.LangEnum;
 
 import java.io.Serializable;

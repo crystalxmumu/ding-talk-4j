@@ -43,6 +43,16 @@ public class OapiUserGetUserInfoResponse extends BaseDingTalkResponse<UserInfoBa
     private String sysLevel;
 
     @Override
+    public BaseDingTalkResponse<UserInfoBaseResponse> initSuccess(UserInfoBaseResponse user) {
+        this.userId = user.getUserId();
+        this.name = user.getName();
+        this.deviceId = user.getDeviceId();
+        this.isSys = user.getIsSys();
+        this.sysLevel = user.getSysLevel();
+        return this;
+    }
+
+    @Override
     public UserInfoBaseResponse getData() {
         return new UserInfoBaseResponse(userId, name, deviceId, isSys, sysLevel);
     }

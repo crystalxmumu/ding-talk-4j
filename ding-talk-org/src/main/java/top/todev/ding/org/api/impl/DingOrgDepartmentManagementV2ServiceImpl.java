@@ -1,6 +1,7 @@
 package top.todev.ding.org.api.impl;
 
 import lombok.NonNull;
+import top.todev.ding.common.util.HttpExUtil;
 import top.todev.ding.org.api.IDingOrgDepartmentManagementV2Service;
 import top.todev.ding.org.api.IDingOrgService;
 import top.todev.ding.org.bean.request.v2.dept.OapiV2DepartmentGetRequest;
@@ -9,7 +10,6 @@ import top.todev.ding.org.bean.response.v2.dept.DeptBaseResponse;
 import top.todev.ding.org.bean.response.v2.dept.DeptGetResponse;
 import top.todev.ding.org.bean.response.v2.dept.OapiV2DepartmentGetResponse;
 import top.todev.ding.org.bean.response.v2.dept.OapiV2DepartmentListSubResponse;
-import top.todev.ding.org.util.OrgHttpExUtil;
 import top.todev.tool.model.exception.NotExceptException;
 
 import java.util.List;
@@ -33,13 +33,13 @@ public class DingOrgDepartmentManagementV2ServiceImpl extends DingOrgBaseService
 
     @Override
     public List<DeptBaseResponse> listSub(OapiV2DepartmentListSubRequest request) throws NotExceptException {
-        return OrgHttpExUtil.getAndCheck(service, V2_DEPARTMENT_LIST_SUB,
+        return HttpExUtil.getAndCheck(service, V2_DEPARTMENT_LIST_SUB,
                 request, OapiV2DepartmentListSubResponse.class, false, true);
     }
 
     @Override
     public DeptGetResponse departmentGetDetail(OapiV2DepartmentGetRequest request) throws NotExceptException {
-        return OrgHttpExUtil.getAndCheck(service, V2_DEPARTMENT_GET_DETAIL,
+        return HttpExUtil.getAndCheck(service, V2_DEPARTMENT_GET_DETAIL,
                 request, OapiV2DepartmentGetResponse.class, false, true);
     }
 }

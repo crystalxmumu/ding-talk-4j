@@ -3,8 +3,9 @@ package top.todev.ding.org.constant.url;
 import cn.hutool.http.Method;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import top.todev.ding.common.constant.url.IDingTalkApiUrl;
 
-import static top.todev.ding.org.bean.DingOrgHostConfig.API_DEFAULT_HOST_URL;
+import static top.todev.ding.common.bean.DingHostConfig.API_DEFAULT_HOST_URL;
 
 /**
  * <p>日志接口Url枚举</p>
@@ -16,7 +17,7 @@ import static top.todev.ding.org.bean.DingOrgHostConfig.API_DEFAULT_HOST_URL;
  */
 @Getter
 @AllArgsConstructor
-public enum OrgReportManagementUrlEnum implements IDingTalkOrgApiUrl {
+public enum OrgReportManagementUrlEnum implements IDingTalkApiUrl {
 
     /** 获取用户发出的日志列表 */
     REPORT_LIST(API_DEFAULT_HOST_URL, "/topapi/report/list", Method.POST)

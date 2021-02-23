@@ -4,6 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 import top.todev.tool.model.bean.IResultResponse;
+import top.todev.tool.model.constant.IStaticDataEnum;
 
 import java.io.Serializable;
 
@@ -43,5 +44,19 @@ public abstract class BaseDingTalkResponse<T> implements Serializable, IResultRe
     @Override
     public String getCode() {
         return this.errCode;
+    }
+
+    @Override
+    public BaseDingTalkResponse<T> initFailure(IStaticDataEnum<String> error) {
+        this.errCode = error.getValue();
+        this.errMsg = error.getCnName();
+        return this;
+    }
+
+    @Override
+    public BaseDingTalkResponse<T> initFailure(String code, String message) {
+        this.errCode = code;
+        this.errMsg = message;
+        return this;
     }
 }

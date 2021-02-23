@@ -3,9 +3,9 @@ package top.todev.ding.org.constant.url.concat;
 import cn.hutool.http.Method;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import top.todev.ding.org.constant.url.IDingTalkOrgApiUrl;
+import top.todev.ding.common.constant.url.IDingTalkApiUrl;
 
-import static top.todev.ding.org.bean.DingOrgHostConfig.API_DEFAULT_HOST_URL;
+import static top.todev.ding.common.bean.DingHostConfig.API_DEFAULT_HOST_URL;
 
 /**
  * <p>部门管理V2接口url枚举</p>
@@ -17,7 +17,7 @@ import static top.todev.ding.org.bean.DingOrgHostConfig.API_DEFAULT_HOST_URL;
  */
 @Getter
 @AllArgsConstructor
-public enum DepartmentManagementV2UrlEnum  implements IDingTalkOrgApiUrl {
+public enum DepartmentManagementV2UrlEnum  implements IDingTalkApiUrl {
 
     /** 获取部门列表 */
     V2_DEPARTMENT_LIST_SUB(API_DEFAULT_HOST_URL, "/topapi/v2/department/listsub", Method.POST),

@@ -7,11 +7,12 @@
     <groupId>top.todev.ding</groupId>
     <artifactId>ding-talk-4j</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <modules>
-        <module>ding-talk-org</module>
         <module>ding-talk-common</module>
-        <module>ding-talk-org-boot-starter</module>
+        <module>ding-talk-org</module>
+        <module>ding-talk-workflow</module>
+        <module>ding-talk-boot-starters</module>
     </modules>
 
 
@@ -19,7 +20,7 @@
         <fly.pig.version>0.0.2</fly.pig.version>
         <spring.boot.version>2.4.1</spring.boot.version>
         <fastjson.version>1.2.73</fastjson.version>
-        <hutool.version>5.5.2</hutool.version>
+        <hutool.version>5.5.8</hutool.version>
         <lombok.version>1.18.16</lombok.version>
         <slf4j.version>1.7.30</slf4j.version>
         <junit.platform.version>1.6.2</junit.platform.version>
@@ -63,6 +64,11 @@
             <dependency>
                 <groupId>top.todev.ding</groupId>
                 <artifactId>ding-talk-org</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.todev.ding</groupId>
+                <artifactId>ding-talk-workflow</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

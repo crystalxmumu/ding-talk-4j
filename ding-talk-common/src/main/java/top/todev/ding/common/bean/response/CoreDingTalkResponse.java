@@ -2,6 +2,11 @@ package top.todev.ding.common.bean.response;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import top.todev.tool.model.bean.CommonResultResponse;
+import top.todev.tool.model.bean.IResultResponse;
+import top.todev.tool.model.constant.IStaticDataEnum;
+
+import static top.todev.tool.model.constant.BaseErrorCodeEnum.ERROR_CODE_0;
 
 /**
  * <p>获取部门列表响应实体</p>
@@ -22,5 +27,12 @@ public class CoreDingTalkResponse<T> extends BaseDingTalkResponse<T> {
     @Override
     public T getData() {
         return this.result;
+    }
+
+    @Override
+    public CoreDingTalkResponse<T> initSuccess(T data) {
+        this.errCode = ERROR_CODE_0.getValue();
+        this.result = data;
+        return this;
     }
 }

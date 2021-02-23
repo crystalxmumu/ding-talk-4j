@@ -3,8 +3,9 @@ package top.todev.ding.org.constant.url;
 import cn.hutool.http.Method;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import top.todev.ding.common.constant.url.IDingTalkApiUrl;
 
-import static top.todev.ding.org.bean.DingOrgHostConfig.API_DEFAULT_HOST_URL;
+import static top.todev.ding.common.bean.DingHostConfig.API_DEFAULT_HOST_URL;
 
 /**
  * <p>身份认证枚举</p>
@@ -15,7 +16,7 @@ import static top.todev.ding.org.bean.DingOrgHostConfig.API_DEFAULT_HOST_URL;
  */
 @Getter
 @AllArgsConstructor
-public enum OrgIdentityAuthenticationUrlEnum implements IDingTalkOrgApiUrl {
+public enum OrgIdentityAuthenticationUrlEnum implements IDingTalkApiUrl {
 
     /** 通过免登码获取用户信息 */
     USER_GET_USER_INFO(API_DEFAULT_HOST_URL, "/user/getuserinfo", Method.GET);

@@ -14,7 +14,7 @@ import top.todev.tool.model.constant.IStaticDataEnum;
  */
 @Getter
 @AllArgsConstructor
-public enum DepartmentMemberSortRuleEnum  implements IStaticDataEnum<String> {
+public enum DepartmentMemberSortRuleEnum implements IStaticDataEnum<String> {
 
     /** 代表按照进入部门的时间升序 */
     DEPT_SORT_RULE_ENTRY_ASC("DEPT_SORT_RULE_ENTRY_ASC", "进入部门的时间升序", "entry_asc"),

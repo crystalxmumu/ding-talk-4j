@@ -3,12 +3,12 @@ package top.todev.ding.org.api.impl;
 import com.alibaba.fastjson.TypeReference;
 import lombok.NonNull;
 import top.todev.ding.common.bean.response.CoreDingTalkResponse;
+import top.todev.ding.common.util.HttpExUtil;
 import top.todev.ding.org.api.IDingOrgReportManagementService;
 import top.todev.ding.org.api.IDingOrgService;
 import top.todev.ding.org.bean.request.v1.report.OapiReportListRequest;
 import top.todev.ding.org.bean.response.PaginationDataList;
 import top.todev.ding.org.bean.response.v1.report.OapiReportVo;
-import top.todev.ding.org.util.OrgHttpExUtil;
 import top.todev.tool.model.exception.NotExceptException;
 
 import static top.todev.ding.org.constant.url.OrgReportManagementUrlEnum.REPORT_LIST;
@@ -30,7 +30,7 @@ public class DingOrgReportManagementServiceImpl extends DingOrgBaseServiceImpl i
 
     @Override
     public PaginationDataList<OapiReportVo> listReport(OapiReportListRequest request) throws NotExceptException {
-        return OrgHttpExUtil.getAndCheck(service, REPORT_LIST,
+        return HttpExUtil.getAndCheck(service, REPORT_LIST,
                 request, () -> new TypeReference<CoreDingTalkResponse<PaginationDataList<OapiReportVo>>>(){},
                 false, true);
     }

@@ -7,8 +7,7 @@ import org.junit.jupiter.api.Test;
 import top.todev.ding.common.constant.data.LangEnum;
 import top.todev.ding.org.api.IDingOrgService;
 import top.todev.ding.org.api.impl.DingOrgServiceImpl;
-import top.todev.ding.org.bean.DingOrgHostConfig;
-import top.todev.ding.org.bean.request.v1.authentication.OapiUserGetUserInfoRequest;
+import top.todev.ding.common.bean.DingHostConfig;
 import top.todev.ding.org.bean.request.v1.report.OapiReportListRequest;
 import top.todev.ding.org.bean.request.v2.dept.OapiV2DepartmentGetRequest;
 import top.todev.ding.org.bean.request.v2.dept.OapiV2DepartmentListSubRequest;
@@ -21,13 +20,13 @@ import top.todev.ding.org.bean.response.v2.dept.DeptBaseResponse;
 import top.todev.ding.org.bean.response.v2.dept.DeptGetResponse;
 import top.todev.ding.org.bean.response.v2.user.ListUserSimpleResponse;
 import top.todev.ding.org.bean.response.v2.user.UserGetResponse;
-import top.todev.ding.org.config.impl.DingOrgDefaultConfigImpl;
+import top.todev.ding.common.config.impl.DingDefaultConfigImpl;
 import top.todev.ding.org.constant.data.DepartmentMemberSortRuleEnum;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static top.todev.ding.org.bean.DingOrgHostConfig.API_DEFAULT_HOST_URL;
+import static top.todev.ding.common.bean.DingHostConfig.API_DEFAULT_HOST_URL;
 
 /**
  * <p>钉钉开放平台接口测试</p>
@@ -44,8 +43,8 @@ public class TestDingOrgService {
 
     @BeforeEach
     public void init() {
-        DingOrgHostConfig config = new DingOrgHostConfig(API_DEFAULT_HOST_URL);
-        DingOrgDefaultConfigImpl storage = new DingOrgDefaultConfigImpl();
+        DingHostConfig config = new DingHostConfig(API_DEFAULT_HOST_URL);
+        DingDefaultConfigImpl storage = new DingDefaultConfigImpl();
         storage.setHostConfig(config);
         storage.setAppKey("dingylwkwqy6z7xk7cdw");
         storage.setAppSecret("BPohcL110xpD6KiTrb9iq-GAkW-LhpNsS0RtKPL2FHym-kmFUi4kyL1zSEZyNHRs");

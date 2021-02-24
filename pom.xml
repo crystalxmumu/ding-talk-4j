@@ -12,6 +12,7 @@
         <module>ding-talk-common</module>
         <module>ding-talk-org</module>
         <module>ding-talk-workflow</module>
+        <module>ding-talk-callback</module>
         <module>ding-talk-boot-starters</module>
     </modules>
 
@@ -21,6 +22,7 @@
         <spring.boot.version>2.4.1</spring.boot.version>
         <fastjson.version>1.2.73</fastjson.version>
         <hutool.version>5.5.8</hutool.version>
+        <commons-codec.version>1.15</commons-codec.version>
         <lombok.version>1.18.16</lombok.version>
         <slf4j.version>1.7.30</slf4j.version>
         <junit.platform.version>1.6.2</junit.platform.version>
@@ -71,6 +73,11 @@
                 <artifactId>ding-talk-workflow</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>top.todev.ding</groupId>
+                <artifactId>ding-talk-callback</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <!-- 三方库 -->
             <dependency>
@@ -107,6 +114,13 @@
                 <artifactId>hutool-http</artifactId>
                 <version>${hutool.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>org.projectlombok</groupId>

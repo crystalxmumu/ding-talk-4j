@@ -10,6 +10,7 @@ import com.alibaba.fastjson.TypeReference;
 import lombok.extern.slf4j.Slf4j;
 import top.todev.ding.common.api.IDingService;
 import top.todev.ding.common.bean.DingTalkRequestParam;
+import top.todev.ding.common.bean.response.BaseDingTalkResponse;
 import top.todev.ding.common.bean.response.CoreDingTalkResponse;
 import top.todev.ding.common.config.DingConfigStorage;
 import top.todev.ding.common.constant.url.IDingTalkApiUrl;
@@ -116,7 +117,7 @@ public class HttpExUtil {
                                     Supplier<TypeReference<CoreDingTalkResponse<T>>> supplier, boolean allowDataNull,
                                     boolean addToken, boolean isSelfRequest) throws NotExceptException {
         String response = dealDingUrl(service, apiUrl, request, addToken, isSelfRequest);
-        CoreDingTalkResponse<T> bean = convertResponse(response, supplier);
+        CoreDingTalkResponse<T> bean = convertCoreDingResponse(response, supplier);
         return checkResponseResult(bean, allowDataNull);
     }
 
@@ -248,6 +249,34 @@ public class HttpExUtil {
     }
 
     /**
+     * <p>将响应结果转换为实体类实例</p>
+     * @param response 响应结果串
+     * @param supplier 转换类
+     * @param <T> 实体泛型
+     * @return 实体实例
+     * @author 小飞猪
+     * @date 2021/02/24 16:43
+     * @since 0.0.2
+     */
+    public static <T> T convertResponse(String response, Supplier<TypeReference<T>> supplier) {
+        return JSON.parseObject(response, supplier.get());
+    }
+
+    /**
+     * 将响应结果转换为实体类实例
+     * @param response 响应结果串
+     * @param supplier 转换类
+     * @param <T> 实体泛型
+     * @return 实体实例
+     * @author 小飞猪
+     * @date 2021/02/24 16:43
+     * @since 0.0.2
+     */
+    public static <T> BaseDingTalkResponse<T> convertBaseDingResponse(String response, Supplier<TypeReference<BaseDingTalkResponse<T>>> supplier) {
+        return JSON.parseObject(response, supplier.get());
+    }
+
+    /**
      * 将响应结果转换为实体类实例
      * @param response 响应结果串
      * @param supplier 转换类
@@ -257,7 +286,7 @@ public class HttpExUtil {
      * @date 2020/12/21 16:43
      * @since 0.0.1
      */
-    public static <T> CoreDingTalkResponse<T> convertResponse(String response, Supplier<TypeReference<CoreDingTalkResponse<T>>> supplier) {
+    public static <T> CoreDingTalkResponse<T> convertCoreDingResponse(String response, Supplier<TypeReference<CoreDingTalkResponse<T>>> supplier) {
         return JSON.parseObject(response, supplier.get());
     }
 

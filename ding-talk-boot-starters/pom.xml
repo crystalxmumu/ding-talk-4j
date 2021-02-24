@@ -15,5 +15,6 @@
     <modules>
         <module>ding-talk-org-boot-starter</module>
         <module>ding-talk-workflow-boot-starter</module>
+        <module>ding-talk-callback-boot-starter</module>
     </modules>
 </project>

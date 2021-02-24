@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+top.todev.ding.callback.boot.config.DingTalkCallbackDefaultConfiguration

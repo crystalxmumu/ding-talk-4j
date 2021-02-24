@@ -68,6 +68,18 @@ public interface DingConfigStorage {
     String getAppSecret();
 
     /**
+     * 获取事件订阅加密AesKey
+     * @return 事件订阅加密AesKey
+     */
+    String getEventAesKey();
+
+    /**
+     * 获取事件订阅签名Token
+     * @return 事件订阅签名Token
+     */
+    String getEventToken();
+
+    /**
      * Gets tmp dir file.
      * @return the tmp dir file
      */

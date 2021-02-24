@@ -26,7 +26,7 @@ public class DingTalkWorkflowDefaultConfiguration {
 
     @Bean
     @ConditionalOnProperty(prefix = DingTalkWorkflowConfigProperties.PREFIX, value = "app-key")
-    public IDingWorkflowService dingOrgService(DingTalkWorkflowConfigProperties properties) {
+    public IDingWorkflowService dingWorkflowService(DingTalkWorkflowConfigProperties properties) {
         DingTalkWorkflowConfigProperties.HostConfig hostConfig = properties.getHost();
 
         DingHostConfig config = new DingHostConfig(hostConfig.getApi());

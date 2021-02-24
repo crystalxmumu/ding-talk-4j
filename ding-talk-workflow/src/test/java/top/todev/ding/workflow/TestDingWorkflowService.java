@@ -1,5 +1,6 @@
 package top.todev.ding.workflow;
 
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -61,8 +62,13 @@ public class TestDingWorkflowService {
 
     @Test
     public void testGetInstance() {
-        ProcessInstanceGetRequest request = new ProcessInstanceGetRequest().setProcessInstanceId("289e11da-635d-4ec3-b9dd-a72d8c0f23e6");
+        ProcessInstanceGetRequest request = new ProcessInstanceGetRequest().setProcessInstanceId("ce96e3bf-9c5e-40bb-9f68-9253979d8b1d");
         ProcessInstanceTopVO vo = service.getWorkflowOfficialService().instanceGet(request);
         log.info("实例详情: {}", vo);
+    }
+
+    @Test
+    public void testStr() {
+        log.info("数据：{}", JSON.toJSONString("hello"));
     }
 }

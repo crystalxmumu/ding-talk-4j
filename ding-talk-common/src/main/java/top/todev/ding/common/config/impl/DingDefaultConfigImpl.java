@@ -28,6 +28,10 @@ public class DingDefaultConfigImpl implements DingConfigStorage, Serializable {
     protected volatile String appKey;
     /** 应用密码 */
     protected volatile String appSecret;
+    /** 事件订阅加密AesKey */
+    protected volatile String eventAesKey;
+    /** 事件订阅签名Token */
+    protected volatile String eventToken;
     /** 访问凭证 */
     protected volatile String accessToken;
     /** 失效时间(毫秒) */

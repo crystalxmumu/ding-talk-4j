@@ -7,7 +7,7 @@
     <groupId>top.todev.ding</groupId>
     <artifactId>ding-talk-4j</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>Ding Talk Open Platform For Java</name>
     <description>钉钉开放平台 Java SDK</description>
     <url>https://github.com/crystalxmumu/ding-talk-4j</url>

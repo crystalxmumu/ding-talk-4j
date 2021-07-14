@@ -22,7 +22,7 @@ public interface IDingOrgService extends IDingService {
     IDingOrgIdentityAuthenticationService getIdentityAuthenticationService();
 
     /**
-     * <p>获取部门管理V2接口/p>
+     * <p>获取部门管理V2接口</p>
      * @return 部门管理V2接口
      * @author 小飞猪
      * @date 2020/12/18 16:52

@@ -183,6 +183,7 @@ public class HttpExUtil {
     /**
      * <p>使用get方式请求接口</p>
      * @param supplier 请求实体
+     * @param isGet 是否get方式
      * @return 响应结果
      * @author 小飞猪
      * @date 2020/12/15 18:21

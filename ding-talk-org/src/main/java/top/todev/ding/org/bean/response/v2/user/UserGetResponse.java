@@ -92,7 +92,10 @@ public class UserGetResponse implements Serializable {
     @JSONField(name = "dept_order_list")
     private List<DeptOrder> deptOrderList;
     /**
-     * 扩展属性，长度最大2000个字符。可以设置多种属性（手机上最多显示10个扩展属性，具体显示哪些属性，请到OA管理后台->设置->通讯录信息设置和OA管理后台->设置->手机端显示信息设置）。 该字段的值支持链接类型填写，同时链接支持变量通配符自动替换，目前支持通配符有：userid，corpid。示例： [工位地址](http:www.dingtalk.com?userid=#userid#&corpid=#corpid#)
+     * 扩展属性，长度最大2000个字符。可以设置多种属性（手机上最多显示10个扩展属性，具体显示哪些属性，
+     * 请到OA管理后台-&gt;设置-&gt;通讯录信息设置和OA管理后台-&gt;设置-&gt;手机端显示信息设置）。
+     * 该字段的值支持链接类型填写，同时链接支持变量通配符自动替换，目前支持通配符有：userid，corpid。
+     * 示例： 【工位地址】
      */
     private String extension;
     /**

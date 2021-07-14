@@ -22,8 +22,8 @@ public class OapiUserGetUserInfoRequest implements Serializable {
 
     /**
      * 免登授权码。 获取方式请参考：
-     * <a href="https://ding-doc.dingtalk.com/document#/org-dev-guide/free-login#topic-1949368">获取小程序免登授权码</a>
-     * <a href="https://ding-doc.dingtalk.com/document#/org-dev-guide/logon-free-process#topic-1949436">获取H5微应用免登授权码</a>
+     * 获取小程序免登授权码: https://ding-doc.dingtalk.com/document#/org-dev-guide/free-login#topic-1949368
+     * 获取H5微应用免登授权码: https://ding-doc.dingtalk.com/document#/org-dev-guide/logon-free-process#topic-1949436
      */
     @RequestParam(type = ParamType.QUERY)
     private String code;

@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * 钉钉开放平台接口错误码.
- * @author Daniel Qian & Binary Wang
+ * @author Daniel Qian Binary Wang
  */
 @Data
 @Builder

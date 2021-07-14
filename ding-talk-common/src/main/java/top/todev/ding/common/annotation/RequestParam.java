@@ -29,7 +29,7 @@ public @interface RequestParam {
     String key() default "";
 
     /**
-     * <p>是否转换布尔值：0<->false,1<->true</p>
+     * <p>是否转换布尔值：0 / false,1 / true</p>
      * @return 布尔值
      */
     boolean isConvertBool() default false;

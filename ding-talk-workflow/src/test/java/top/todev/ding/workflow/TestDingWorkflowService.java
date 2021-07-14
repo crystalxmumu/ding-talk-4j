@@ -62,7 +62,7 @@ public class TestDingWorkflowService {
 
     @Test
     public void testGetInstance() {
-        ProcessInstanceGetRequest request = new ProcessInstanceGetRequest().setProcessInstanceId("ce96e3bf-9c5e-40bb-9f68-9253979d8b1d");
+        ProcessInstanceGetRequest request = new ProcessInstanceGetRequest().setProcessInstanceId("1ef95529-6272-453a-bd1e-1ccc46d866b8");
         ProcessInstanceTopVO vo = service.getWorkflowOfficialService().instanceGet(request);
         log.info("实例详情: {}", vo);
     }

@@ -38,7 +38,7 @@ public class ProcessInstanceCreateRequest implements Serializable {
     private String approvers;
     /** 审批人列表。支持会签/或签，优先级高于approvers变量。 */
     @JSONField(name = "approvers_v2")
-    private List<ProcessInstanceApproverVO> approversV2;
+    private ProcessInstanceApproverVO approversV2;
     /** 抄送人userid列表。说明：该参数需要与approvers或approvers_v2参数一起传，抄送人才会生效。示例：user2,user3 */
     @JSONField(name = "cc_list")
     private String ccList;

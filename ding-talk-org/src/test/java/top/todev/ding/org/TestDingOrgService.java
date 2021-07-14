@@ -46,8 +46,8 @@ public class TestDingOrgService {
         DingHostConfig config = new DingHostConfig(API_DEFAULT_HOST_URL);
         DingDefaultConfigImpl storage = new DingDefaultConfigImpl();
         storage.setHostConfig(config);
-        storage.setAppKey("dingylwkwqy6z7xk7cdw");
-        storage.setAppSecret("BPohcL110xpD6KiTrb9iq-GAkW-LhpNsS0RtKPL2FHym-kmFUi4kyL1zSEZyNHRs");
+        storage.setAppKey("请填写key");
+        storage.setAppSecret("请填写密钥");
         service = new DingOrgServiceImpl();
         service.setDingOrgConfigStorage(storage);
     }
